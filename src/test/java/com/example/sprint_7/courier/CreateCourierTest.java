@@ -28,7 +28,7 @@ public class CreateCourierTest {
         ValidatableResponse response = courierClient.create(courier);
         ValidatableResponse loginResponse = courierClient.login(Credentials.from(courier));
         id = loginResponse.extract().path("id").toString();
-        response.assertThat().statusCode(201).body("sssok", is(true));
+        response.assertThat().statusCode(201).body("ok", is(true));
     }
 
     @Test
